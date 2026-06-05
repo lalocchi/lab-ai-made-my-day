@@ -39,40 +39,31 @@ export default function Home() {
 
     loadPokemon();
   }, [page]);
+return (
+  <div className={styles.page}>
+    <header className={styles.header}>
+      <h1 className={styles.title}>Pokédex</h1>
 
-  return (
-    <div className={styles.page}>
-      <header style={{ textAlign: "center", marginBottom: "32px" }}>
-        <h1 style={{ fontSize: "32px", fontWeight: 700, color: "#ef5350" }}>
-          Pokédex
-        </h1>
-        <p style={{ color: "#666", marginTop: "4px" }}>
-          Click on a Pokémon to see its details.
+      <p className={styles.subtitle}>
+        Click on a Pokémon to see its details.
+      </p>
+    </header>
+
+    {loading && (
+      <p className={styles.loading}>
+        Loading Pokémon…
+      </p>
+    )}
+
+    {error && (
+      <div className={styles.errorBox}>
+        <strong>Oops! We couldn&apos;t load the Pokémon.</strong>
+
+        <p className={styles.errorText}>
+          {error}
         </p>
-      </header>
-
-      {loading && (
-        <p style={{ textAlign: "center", padding: "40px" }}>Loading Pokémon…</p>
-      )}
-
-      {error && (
-        <div
-          style={{
-            backgroundColor: "#fdecea",
-            border: "1px solid #f5c6cb",
-            color: "#b71c1c",
-            padding: "16px",
-            borderRadius: "8px",
-            textAlign: "center",
-            maxWidth: "480px",
-            margin: "0 auto",
-          }}
-        >
-          <strong>Oops! We couldn&apos;t load the Pokémon.</strong>
-          <p style={{ marginTop: "4px", fontSize: "14px" }}>{error}</p>
-        </div>
-      )}
-
+      </div>
+    )}
       {!loading && !error && (
         <>
           <div className={styles.grid}>

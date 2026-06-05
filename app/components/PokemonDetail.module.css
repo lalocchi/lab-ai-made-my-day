@@ -19,3 +19,78 @@
   cursor: pointer;
   color: #555;
 }
+.card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.image {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 26px;
+  margin: 8px 0 4px;
+}
+
+.id {
+  color: #9aa0a6;
+  font-weight: 600;
+}
+
+.loading {
+  margin-top: 20px;
+}
+
+.details {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.types {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.typeBadge {
+  background-color: #ef5350;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.info {
+  margin: 4px 0;
+}
+
+.statsTitle {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.statRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 2px 0;
+}
+
+.statName {
+  text-transform: capitalize;
+}
+
+.statValue {
+  font-weight: 700;
+}
